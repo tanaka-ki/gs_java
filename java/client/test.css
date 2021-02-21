@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+ }
+ 
+ header {
+    padding: 30px 4% 10px;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+#api{
+    font-size: 12px; 
+    margin : 30px ;
+}
+
+body{
+    font-size: 30; 
+}
+
+div #content{
+    margin : 30px ;
+    padding : 20px ;
+}
+
+div #buttons{
+    margin : 30px ;
+    padding : 20px ;
+}
+
+div #tabledata{
+    margin : 30px;
+    padding : 10px;
+}
+
+input{
+    width:200px;
+    height:30px;
+}
+
+.facilityName_input[type=text]:focus {
+    border: 1px solid #ff9900;
+    outline: 0;
+}
+
+select{
+    width:200px;
+    height:30px;
+}
+
+td, th {
+    font-size: 90%;
+}
+
+table.hospital-list{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+ }
+  
+table.hospital-list th,table.hospital-list td{
+    padding: 10px 0;
+}
+  
+table.hospital-list tr:nth-child(odd){
+    background-color: #eee
+}
+
+.btn {
+    background: #ffb81f; /* 背景色 */
+    color: #000; /* 文字色 */
+    padding: 10px 30px; /* 上下の余白、左右の余白 */
+    text-decoration: none; /* デフォルトで入る下線を消す */
+    border-radius: 16px; /* 角を丸くする */
+    transition-property: opacity;
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+  }
+  .btn:hover {
+    opacity: .7;
+  }
+
+/*ロード*/
+.loader {
+    margin: 100px auto;
+    position: absolute;
+    font-size: 25px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load5 1.1s infinite ease;
+    animation: load5 1.1s infinite ease;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  @-webkit-keyframes load5 {
+    0%,
+    100% {
+      box-shadow: 0em -2.6em 0em 0em #ffb81f, 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.5), -1.8em -1.8em 0 0em rgba(255,184,31, 0.7);
+    }
+    12.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.7), 1.8em -1.8em 0 0em #ffb81f, 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.5);
+    }
+    25% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.5), 1.8em -1.8em 0 0em rgba(255,184,31, 0.7), 2.5em 0em 0 0em #ffb81f, 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    37.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.5), 2.5em 0em 0 0em rgba(255,184,31, 0.7), 1.75em 1.75em 0 0em #ffb81f, 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    50% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.5), 1.75em 1.75em 0 0em rgba(255,184,31, 0.7), 0em 2.5em 0 0em #ffb81f, -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    62.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.5), 0em 2.5em 0 0em rgba(255,184,31, 0.7), -1.8em 1.8em 0 0em #ffb81f, -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    75% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.5), -1.8em 1.8em 0 0em rgba(255,184,31, 0.7), -2.6em 0em 0 0em #ffb81f, -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    87.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.5), -2.6em 0em 0 0em rgba(255,184,31, 0.7), -1.8em -1.8em 0 0em #ffb81f;
+    }
+  }
+  @keyframes load5 {
+    0%,
+    100% {
+      box-shadow: 0em -2.6em 0em 0em #ffb81f, 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.5), -1.8em -1.8em 0 0em rgba(255,184,31, 0.7);
+    }
+    12.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.7), 1.8em -1.8em 0 0em #ffb81f, 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.5);
+    }
+    25% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.5), 1.8em -1.8em 0 0em rgba(255,184,31, 0.7), 2.5em 0em 0 0em #ffb81f, 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    37.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.5), 2.5em 0em 0 0em rgba(255,184,31, 0.7), 1.75em 1.75em 0 0em #ffb81f, 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    50% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.5), 1.75em 1.75em 0 0em rgba(255,184,31, 0.7), 0em 2.5em 0 0em #ffb81f, -1.8em 1.8em 0 0em rgba(255,184,31, 0.2), -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    62.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.5), 0em 2.5em 0 0em rgba(255,184,31, 0.7), -1.8em 1.8em 0 0em #ffb81f, -2.6em 0em 0 0em rgba(255,184,31, 0.2), -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    75% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.5), -1.8em 1.8em 0 0em rgba(255,184,31, 0.7), -2.6em 0em 0 0em #ffb81f, -1.8em -1.8em 0 0em rgba(255,184,31, 0.2);
+    }
+    87.5% {
+      box-shadow: 0em -2.6em 0em 0em rgba(255,184,31, 0.2), 1.8em -1.8em 0 0em rgba(255,184,31, 0.2), 2.5em 0em 0 0em rgba(255,184,31, 0.2), 1.75em 1.75em 0 0em rgba(255,184,31, 0.2), 0em 2.5em 0 0em rgba(255,184,31, 0.2), -1.8em 1.8em 0 0em rgba(255,184,31, 0.5), -2.6em 0em 0 0em rgba(255,184,31, 0.7), -1.8em -1.8em 0 0em #ffb81f;
+    }
+  }

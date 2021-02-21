@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <link rel="stylesheet" href="./test.css">
+    <head>
+        <meta charset="utf-8">
+        <title>My test page</title>
+    </head>
+    <body>
+        <div id = "container">
+            <header>
+                <h1>
+                    <a>医療機関医療提供状況</a>
+                </h1>
+                <dic id = "api">
+                    使用API<br>
+                    全国の医療機関の医療提供状況:https://opendata.corona.go.jp/api/covid19DailySurvey<br>
+                    都道府県内市区町村一覧取得:https://www.land.mlit.go.jp/webland/api/CitySearch
+                </dic>
+
+            </header>
+
+            <div id = "content">
+                <main>
+                    <table class = "select-hospital">
+                        <tr>
+                            <td>
+                                <strong>施設名称</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" class="facilityName_input" id="input_message_name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>都道府県</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class = "pref_select" name="prefName" id = "pref_select">
+                                    <option value="">選択しない</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>市町村</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class = "city_select" name="prefName" id = "prefName">
+                                    <option value="">選択しない</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>施設種別</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class = "facility_select" name="facilityType" id = "facility_select">
+                                    <option value="">選択しない</option>
+                                    <option value="入院">入院</option>
+                                    <option value="外来">外来</option>
+                                    <option value="救急">救急</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>施設状況</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select class = "ansType_select" name="facilityType" id = "ansType">
+                                    <option value="">選択しない</option>
+                                    <option value="通常">通常</option>
+                                    <option value="制限">制限</option>
+                                    <option value="受け入れなし">受け入れなし</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </main>
+            </div>
+            <div id = "buttons">
+                <a href="javascript:getDailySurvey();" class="btn">検索</a>
+            </div>
+            <div id = "loader" class="loader">Loading...</div>
+            <div id = "tabledata">
+                <table id ="hospital-list" class ="hospital-list">
+                <div id = "resulttext"></div>
+            </div>
+        </div>
+        
+    </body>
+    <script language="javascript" type="text/javascript" src="./test.js"></script>
+</html>
